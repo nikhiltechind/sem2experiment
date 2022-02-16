@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+<style>
+#battery{
+font-size:100px;
+color:yellow;
+}
+</style>
+    </head>
+<script>
+navigator.getBattery().then(function(battery) 
+{ 
+var level = battery.level
+level=level*100+"%";
+
+document.getElementById('battery').innerHTML = level;
+});
+</script>
+    <body>
+    <div id="outerbody">
+        <div id="battery"></div>
+        </div>
+    </body>
+</html>
